@@ -1,8 +1,6 @@
-
-const sum = (a,b) =>{
-    return a+b;
+const getProducts = () => {
+    return "Iphone";
 }
 
 module.exports = {
-    sum
-}
+    getProducts};
