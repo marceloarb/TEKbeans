@@ -7,15 +7,12 @@ const productsList = {
 describe("Products available()", () => {
     test("ProductView returns an empty arrays", () => {
         let expected = [];
-        products.query = jest.fn()
-        let actual = products.queryProducts()
-        expect(actual.mock.calls).toEqual(expected);
+        const actual = products.query.mockImplementation(() => []);
+        expect(actual()).toEqual(expected);
     })  
     test("QueryProqueryProducts() returns products ", () =>{
         let expected = productsList;
-        products.query = jest.fn()
-        let actual = products.queryProducts()
-        console.log(products.queryProducts())
-        expect(actual.mock.calls).toEqual(expected);
+        const actual = products.query.mockImplementation(() => productsList);
+        expect(actual()).toEqual(expected);
     })
 })
