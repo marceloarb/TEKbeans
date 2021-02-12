@@ -1,6 +1,6 @@
-const productsRepo = require("../productsRepo");
-const productsServ = require("../productsService");
-jest.mock('../productsRepo');
+const productsRepo = require("../repository/productsRepo");
+const productsServ = require("../services/productsService");
+jest.mock('../repository/productsRepo');
 const productsList = {
     'cellphones': ['iphone','motorolla'],
     'cars':['fusion','tundra']
