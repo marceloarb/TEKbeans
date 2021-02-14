@@ -18,5 +18,7 @@ describe("Products available()", () => {
         const actual = productsServ.queryProduct()
         expect(actual).toEqual(expected);
     })
-    
+    test("If product is equal to null return UNKNOWN item", () =>{
+        expect(actual).toEqual(expected)
+    })
 });
