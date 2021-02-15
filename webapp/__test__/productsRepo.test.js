@@ -19,6 +19,7 @@ describe("Products available()", () => {
         expect(actual).toEqual(expected);
     })
     test("If product is equal to null return UNKNOWN item", () =>{
+        let expected = "UNKNOWN"
         expect(actual).toEqual(expected)
     })
 });
