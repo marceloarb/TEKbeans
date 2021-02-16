@@ -1,9 +1,8 @@
 const query = () => {
-    return { 
-        'cellphones': ['iphone','motorolla'],
-        'cars':['fusion','tundra'],
-        'marcelo':["Legal"]
-    };
+    return getAllProducts();
+}
+const getAllProducts = () => {
+    return ['iphone','motorolla','fusion','tundra',"Legal"];
 }
 
 module.exports = {

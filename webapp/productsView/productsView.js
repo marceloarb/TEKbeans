@@ -1,8 +1,8 @@
 const productsRepo = require("../repository/productsRepo")
-const queryProduct = () => {
-    
+const getProducts = () => {
     return productsRepo.query();
 }
+
 module.exports = {
-    queryProduct
-    };
+    getProducts
+}

@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <ul id="products-list"></ul>
+    <script defer type = "text/javascript" src="./productsView.js">  
+        const productList = document.querySelector("product-list");
+        const load = () => {
+            getProducts().array.forEach(product => {
+            const listItem = document.createElement("li");
+            listItem.textContent = product;
+            productList.appendChild(listItem);
+            })
+        }
+        window.onload = load;
+        </script>
 </body>
 </html>
