@@ -1,10 +1,22 @@
 const productsRepo = require("../repository/productsRepo");
 const productsServ = require("../services/productsService");
 jest.mock('../repository/productsRepo');
-const productsList = {
-    'cellphones': ['iphone','motorolla',null],
-    'cars':['fusion','tundra'],
-};
+const productsList = [
+    {
+        "id": 1 ,
+        "title": "Crop",
+        "key": "#2324",
+        "price": 28.99 ,
+        "inventory":4
+    },
+    {
+        "id": 2 ,
+        "title": "marcelo",
+        "key": "#232334",
+        "price": 28.99 ,
+        "inventory":0
+    }
+];
 describe("Products available()", () => {
     test("ProductView returns an empty arrays", () => {
         let expected = [];
@@ -19,3 +31,10 @@ describe("Products available()", () => {
         expect(actual).toEqual(expected);
     })
 });
+describe("Products unavailable()", () => {
+    test("Checking products quantity equal to zero", () => {
+        let expected = "Buying more";
+        let actual = productsServ.queryProduct();
+        expect(actual).toEqual(expected);
+    })
+} )
